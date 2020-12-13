@@ -9,7 +9,10 @@ app.use(bodyParser.urlencoded({ extended : true}))
 
 const MongoClient = require('mongodb').MongoClient
 
-connectionString = "mongodb+srv://bkm:kali@123@cluster0.nflyq.mongodb.net/haikuDB?retryWrites=true&w=majority"
+const user = '<user>' 
+const pwd = '<password>'
+
+connectionString = "mongodb+srv://"+user+":"+pwd+"@cluster0.nflyq.mongodb.net/haikuDB?retryWrites=true&w=majority"
 
 app.listen(3000, function(){ 
     console.log("listening on port 3000")
