@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome To TinyHaikuJam</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+
+  </head>
+  <body>
+    <form action="/jam" method="POST" >
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+        <h1 >Welcome To TinyHaikuJam</h1>
+
+        <% if(jams[0].jam.length==2) {%>
+            <h2>[Topic] <%= jams[0].topic %></h2>
+            <input type="text"  name="first_line" placeholder="Please enter first line" value= '<%= jams[0].jam[0] %>'  readonly>
+            <input type="text" name="second_line" placeholder="Please enter second line" value= '<%= jams[0].jam[1] %>' readonly>
+            <input type="text" name="third_line" placeholder="Please enter third line" required>
+        <% }%>
+        <% if(jams[0].jam.length==1){ %>
+            <h2>[Topic] <%= jams[0].topic %></h2>
+            <input type="text"  name="first_line" placeholder="Please enter first line" value= '<%= jams[0].jam[0] %>'  readonly>
+            <input type="text" name="second_line" placeholder="Please enter second line"  required>
+            <input type="text" name="third_line" placeholder="Please enter third line" >
+        <% }%>
+        <% if(jams[0].jam.length==0){ %>
+            <h2>[Topic] <%= jams[0].topic %></h2>
+            <input type="text"  name="first_line" placeholder="Please enter first line"  required>
+            <input type="text" name="second_line" placeholder="Please enter second line"  >
+            <input type="text" name="third_line" placeholder="Please enter third line" >
+        <% }%>
+        <button type="submit" >Send You Jam</button>
+        
+        
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome To TinyHaikuJam</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+    <style>div {
+        overflow-y: scroll; height:800px;
+        }
+        </style>
+    
+  </head>
+  <body>
+    <form action="/topic" method="POST">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+            <h1 >Welcome To TinyHaikuJam</h1>
+            <nav>
+            <ul class="jams">
+                <% for(var i = 0; i < jams.length; i++) {%>
+                <li class="jams">
+                  <h3><%= jams[i].topic %></h3></br>
+                  <% for(var j = 0; j < jams[i].jam.length; j++) { %>
+                  <li><%= jams[i].jam[j] %></li></br>
+                  <% } %>
+                </li>
+                <% } %>
+              </ul>
+              </nav>
+        <button type="submit" >Send You Jam</button>
+      </div>
+    </form>
+
+  </body>
+</html>
