@@ -44,7 +44,6 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Configure app
 
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 Open 'haikuTask/server.js' file and edit 'connectionString' variable along with your mongodb username and password. Basically, this variable is the URL of your database be it local or remote.
 
 Note: you can get your MongoDB URL through connect button in cluster home page of mongodb atlas
